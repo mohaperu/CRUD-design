@@ -2,37 +2,69 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-image: linear-gradient(to left, #c3dee3, #bfe2df, #c0e6d7, #cae7cb, #dae7bf);
+}
+.title{
+  margin-top: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title #heading{
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: sans-serif;
+  color: rgb(80, 80, 80);
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#createbutton{
+  margin-top: 1rem;
+}
+
+.box{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.604);
+  margin: 3rem 9rem 0 9rem ;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.box .card{
+  border: 1px solid black;
+  width: 16rem;
+  height: 20rem;
+  background-color: white;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box .card #profile_pic{
+  margin-top: 1rem;
+}
+
+#edit,#create,#heading{
+  text-decoration:none;
+}
+
+.edit-box{
+  text-align: center;
+  text-align: center;
+  height: 18.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: -2rem;
+  background-color: white;
+}
+
+.edit-box input{
+  width: 20rem;
+  height: 1.5rem;
+  margin-top: .5rem;
+}
+
+#createhead{
+  font-size: 2rem;
+
 }
