@@ -37,8 +37,6 @@ function Main() {
 
 function Home() {
 
-  
-
   //get
   const [get, setGet] = useState([]);
 
@@ -84,8 +82,8 @@ function Home() {
 }
 
 function Edit() {
-  const history = useHistory();
 
+  const history = useHistory();
 
   //put
   const load = async () => await axios.get("https://612dbcd5e579e1001791dcef.mockapi.io/crud").then(response => setGet(response.data));
