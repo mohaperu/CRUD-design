@@ -1,6 +1,6 @@
 import './App.css';
 import { Button } from '@mui/material';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -36,6 +36,8 @@ function Main() {
 }
 
 function Home() {
+
+  
 
   //get
   const [get, setGet] = useState([]);
@@ -82,6 +84,7 @@ function Home() {
 }
 
 function Edit() {
+  const history = useHistory();
 
 
   //put
@@ -90,6 +93,7 @@ function Edit() {
   const onPut = async () => {
     await axios.put(`https://612dbcd5e579e1001791dcef.mockapi.io/crud/${id}`,get)
       .then(() => load())
+      .then(() => history.goBack())
   }
 
   //get
@@ -134,6 +138,8 @@ function Edit() {
 
 function Create() {
 
+  const history = useHistory();
+
   const [post, setPost] = useState(
     {
       pic: "",
@@ -151,6 +157,7 @@ function Create() {
 
   const postData = async () => {
     await axios.post('https://612dbcd5e579e1001791dcef.mockapi.io/crud', post)
+    .then(() => history.goBack())
   }
   return (
     <>
